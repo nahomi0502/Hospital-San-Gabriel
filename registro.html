@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Portal del Paciente</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- FONDO ANIMADO Y CAPAS -->
+    <div class="fondo-animado"></div>
+    <div class="capa-oscura"></div>
+    <div class="decoracion decoracion-1">┼</div>
+    <div class="decoracion decoracion-2">┼</div>
+
+    <!-- CONTENEDOR GENERAL DE DOS COLUMNAS -->
+    <div class="portal-container">
+
+        <!-- LADO IZQUIERDO: Panel de Marca y Características -->
+        <div class="portal-brand-side">
+            <div class="brand-content">
+                
+                <div class="brand-badge">
+                    <span class="badge-dot"></span> Registro de Nuevos Pacientes
+                </div>
+
+                <h1 class="titulo-principal">
+                    Hospital <span>San Gabriel</span>
+                </h1>
+                
+                <p class="brand-tagline">
+                    Cree su cuenta en segundos. Obtenga acceso preferencial a la programación de citas médicas, consulta de resultados en tiempo real y atención médica personalizada.
+                </p>
+
+                <div class="brand-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">✨</div>
+                        <h3>Atención Integral</h3>
+                        <p>Gestión rápida de citas y seguimiento para pacientes registrados.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Expediente Seguro</h3>
+                        <p>Sus datos médicos están protegidos bajo estrictas normas de privacidad.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- LADO DERECHO: Tarjeta del Formulario de Registro -->
+        <div class="portal-form-side">
+            
+            <form id="form-login" action="#" method="POST">
+                
+                <div class="form-heading">
+                    <div class="user-icon">┼</div>
+                    <div>
+                        <h2>Registro Médico</h2>
+                        <p>Ingrese sus datos clínicos para crear su expediente</p>
+                    </div>
+                </div>
+
+                <!-- Campo: Nombre Completo del Paciente -->
+                <div class="input-group">
+                    <label for="nombre">Nombre Completo del Paciente</label>
+                    <div class="input-wrap">
+                        <span>👤</span>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Dra. María López o paciente" required>
+                    </div>
+                </div>
+
+                <!-- Campo: Correo Electrónico -->
+                <div class="input-group">
+                    <label for="email">Correo Electrónico</label>
+                    <div class="input-wrap">
+                        <span>✉️</span>
+                        <input type="email" id="email" name="email" placeholder="paciente@hospital.com" required>
+                    </div>
+                </div>
+
+                <!-- Campo: Contraseña -->
+                <div class="input-group">
+                    <label for="password">Contraseña de Acceso</label>
+                    <div class="input-wrap password-wrap">
+                        <span>🔒</span>
+                        <input type="password" id="password" name="password" placeholder="••••••••" required>
+                        <button type="button" aria-label="Mostrar contraseña">👁️</button>
+                    </div>
+                </div>
+
+                <!-- Campo NUEVO: Número de Expediente o Folio -->
+                <div class="input-group">
+                    <label for="expediente">Número de Expediente (Opcional)</label>
+                    <div class="input-wrap">
+                        <span>📋</span>
+                        <input type="text" id="expediente" name="expediente" placeholder="PAC-2026-HOSPITAL">
+                    </div>
+                </div>
+
+                <!-- Campo NUEVO: Tipo de Sangre -->
+                <div class="input-group">
+                    <label for="tipo-sangre">Tipo de Sangre</label>
+                    <div class="input-wrap">
+                        <span>🩸</span>
+                        <select id="tipo-sangre" name="tipo_sangre">
+                            <option value="o_pos" selected>O Positivo (O+)</option>
+                            <option value="o_neg">O Negativo (O-)</option>
+                            <option value="a_pos">A Positivo (A+)</option>
+                            <option value="a_neg">A Negativo (A-)</option>
+                            <option value="b_pos">B Positivo (B+)</option>
+                            <option value="b_neg">B Negativo (B-)</option>
+                            <option value="ab_pos">AB Positivo (AB+)</option>
+                            <option value="ab_neg">AB Negativo (AB-)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Campo NUEVO: Especialidad Médica de Interés -->
+                <div class="input-group">
+                    <label for="especialidad">Especialidad Médica Frecuente</label>
+                    <div class="input-wrap">
+                        <span>🏥</span>
+                        <select id="especialidad" name="especialidad">
+                            <option value="general" selected>Medicina General</option>
+                            <option value="pediatria">Pediatría</option>
+                            <option value="cardiologia">Cardiología</option>
+                            <option value="ginecologia">Ginecología</option>
+                            <option value="traumatologia">Traumatología</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Campo NUEVO: Alergias o Antecedentes Médicos Importantes -->
+                <div class="input-group">
+                    <label for="alergias">Alergias o Observaciones Médicas</label>
+                    <div class="input-wrap">
+                        <span>⚠️</span>
+                        <input type="text" id="alergias" name="alergias" placeholder="Ej. Alergia a la penicilina / Ninguna">
+                    </div>
+                </div>
+
+                <!-- Términos y Condiciones -->
+                <div class="form-options">
+                    <label class="remember">
+                        <input type="checkbox" id="terminos" name="terminos" required>
+                        Acepto las políticas de privacidad y aviso de privacidad médico
+                    </label>
+                </div>
+
+                <!-- Botón de Envío -->
+                <button type="submit" class="btn-submit">
+                    Registrar Expediente <span>→</span>
+                </button>
+
+                <!-- Pie de tarjeta con enlace para regresar al Login -->
+                <div class="form-footer">
+                    <p>¿Ya cuenta con expediente? <a href="index.html" class="forgot-link">Iniciar Sesión</a></p>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="script_registro.js"></script>
+</body>
+</html>

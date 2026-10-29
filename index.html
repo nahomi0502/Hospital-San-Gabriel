@@ -1,0 +1,229 @@
+<!--
+  ======================================================================
+  INSTITUCIÓN: CBTis 166 Pablo Torres Burgos
+  ----------------------------------------------------------------------
+  * Estudiante: Maldonado Sanchez Aivlis Luciana Nahomi
+  * Grupo: 3B PRO VESP  
+  * Actividad: Práctica Temática sobre Formularios en HTML5
+  ====================================================================== -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital San Gabriel | Portal Médico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Fondo animado -->
+    <div class="fondo-animado"></div>
+    <div class="capa-oscura"></div>
+    <div class="decoracion decoracion-1">✚</div>
+    <div class="decoracion decoracion-2">✚</div>
+
+    <!-- Barra superior -->
+    <header class="barra-superior">
+        <a href="#" class="logo">
+            <span class="logo-icono">♡</span>
+            <span>Hospital <b>San Gabriel</b>
+                <small>Tu salud, nuestra prioridad</small>
+            </span>
+        </a>
+
+        <div class="mensaje-superior">
+            <span class="pulso">♥</span>
+            Cuidamos hoy, un mejor mañana
+        </div>
+    </header>
+
+    <main class="portal-container">
+
+        <!-- PANEL IZQUIERDO -->
+        <section class="portal-brand-side">
+
+            <div class="brand-badge">
+                <span class="badge-dot"></span>
+                PORTAL DE PACIENTES Y PERSONAL MÉDICO
+            </div>
+
+            <h1 class="titulo-principal">
+                Hospital
+                <span>San Gabriel</span>
+            </h1>
+
+            <p class="brand-tagline">
+                Gestiona tus citas médicas, consulta tus resultados
+                y accede a tus servicios de salud desde un entorno
+                digital seguro y confiable.
+            </p>
+
+            <!-- Servicios médicos -->
+            <div class="brand-features">
+
+                <article class="feature-item">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Seguridad</h3>
+                    <p>Tus datos médicos y personales siempre protegidos.</p>
+                </article>
+
+                <article class="feature-item">
+                    <div class="feature-icon">📅</div>
+                    <h3>Citas Médicas</h3>
+                    <p>Agenda, modifica y consulta tus citas fácilmente.</p>
+                </article>
+
+                <article class="feature-item">
+                    <div class="feature-icon">📋</div>
+                    <h3>Resultados</h3>
+                    <p>Consulta tus estudios y resultados en línea.</p>
+                </article>
+
+                <article class="feature-item">
+                    <div class="feature-icon">🎧</div>
+                    <h3>Soporte 24/7</h3>
+                    <p>Estamos para ayudarte en todo momento.</p>
+                </article>
+
+            </div>
+
+            <!-- Tarjeta informativa -->
+            <div class="promo-card">
+                <div class="promo-image">🩺</div>
+
+                <div class="promo-text">
+                    <h3>Tu salud en buenas manos</h3>
+                    <p>Tecnología y atención humana, siempre contigo.</p>
+                </div>
+
+                <span class="promo-arrow">➜</span>
+            </div>
+
+            <!-- Información inferior -->
+            <div class="hotel-info">
+                <div class="info-item">
+                    <span class="info-icon">✚</span>
+                    <div>
+                        <strong>Atención médica</strong>
+                        <p>Compromiso con tu bienestar</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <span class="info-icon">♡</span>
+                    <div>
+                        <strong>Hospital San Gabriel</strong>
+                        <p>Salud cerca de ti</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- PANEL DERECHO: FORMULARIO -->
+        <section class="portal-form-side">
+
+            <form id="form-login" action="/login-procesar" method="POST">
+
+                <div class="form-heading">
+                    <div class="user-icon">♙</div>
+                    <div>
+                        <h2>Iniciar Sesión</h2>
+                        <p>Accede a tu cuenta para continuar</p>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Correo Electrónico</label>
+                    <div class="input-wrap">
+                        <span>✉</span>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="paciente@hospital.com"
+                            required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="tipo-usuario">Tipo de Usuario</label>
+                    <div class="input-wrap">
+                        <span>♙</span>
+                        <select id="tipo-usuario" name="tipo_usuario" required>
+                            <option value="paciente" selected>Paciente</option>
+                            <option value="medico">Personal Médico</option>
+                            <option value="enfermeria">Enfermería</option>
+                            <option value="administrador">Administrador</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="codigo">Código de Paciente</label>
+                    <div class="input-wrap">
+                        <span>▤</span>
+                        <input
+                            type="text"
+                            id="codigo"
+                            name="codigo"
+                            placeholder="PAC-2026-HOSPITAL"
+                            required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Contraseña</label>
+                    <div class="input-wrap password-wrap">
+                        <span>♙</span>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Escribe tu contraseña"
+                            required>
+                        <button
+                            type="button"
+                            id="ver-password"
+                            aria-label="Mostrar contraseña">◉</button>
+                    </div>
+                </div>
+
+                <div class="form-options">
+                    <label class="remember">
+                        <input type="checkbox" id="recordar">
+                        Mantener sesión iniciada
+                    </label>
+
+                    <a href="recuperar.html" class="forgot-link">
+                        ¿Olvidaste tu contraseña?
+                    </a>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    <span>➜</span> Iniciar Sesión
+                </button>
+
+                <p id="mensaje" role="status" aria-live="polite"></p>
+
+                <div class="form-footer">
+                    <span>🔒</span>
+                    Tu información merece estar protegida.
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie">
+        Hospital San Gabriel © 2026
+        <span>|</span> Seguridad
+        <span>|</span> Privacidad
+        <span>|</span> Términos y condiciones
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
